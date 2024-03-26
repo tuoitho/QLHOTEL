@@ -61,11 +61,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhSachTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachTaiKhoan.Designer.cs">
+      <DependentUpon>DanhSachTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAccount.Designer.cs">
       <DependentUpon>FormAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCaoHangNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoHangNgay.Designer.cs">
+      <DependentUpon>FormBaoCaoHangNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheckInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckInOut.Designer.cs">
+      <DependentUpon>FormCheckInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKiemTraGioLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKiemTraGioLam.Designer.cs">
+      <DependentUpon>FormKiemTraGioLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLichLamViec.Designer.cs">
+      <DependentUpon>FormLichLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
@@ -79,6 +115,12 @@
     <Compile Include="FormNhanVien.designer.cs">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThayThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThayThe.Designer.cs">
+      <DependentUpon>FormThayThe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLHotelDataSet.Designer.cs">
@@ -86,6 +128,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLHotelDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhSachTaiKhoan.resx">
+      <DependentUpon>DanhSachTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLichLamViec.resx">
+      <DependentUpon>FormLichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +399,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scheduler.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

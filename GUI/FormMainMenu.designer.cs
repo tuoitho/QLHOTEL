@@ -33,18 +33,20 @@ namespace GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panel_menu = new System.Windows.Forms.Panel();
+            this.button_nhanvien = new System.Windows.Forms.Button();
+            this.panel_logo = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblTiltle = new System.Windows.Forms.Label();
+            this.panel_childForm = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_checkinout = new System.Windows.Forms.Button();
             this.btn_dangxuat = new System.Windows.Forms.Button();
             this.button_account = new System.Windows.Forms.Button();
             this.button_khachhang = new System.Windows.Forms.Button();
-            this.button_nhanvien = new System.Windows.Forms.Button();
             this.button_nv = new System.Windows.Forms.Button();
             this.button_hoadon = new System.Windows.Forms.Button();
-            this.button_danhmuc = new System.Windows.Forms.Button();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTiltle = new System.Windows.Forms.Label();
-            this.panel_childForm = new System.Windows.Forms.Panel();
-            this.panel_logo = new System.Windows.Forms.Panel();
+            this.button_trangchu = new System.Windows.Forms.Button();
             this.panel_menu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +54,8 @@ namespace GUI
             // panel_menu
             // 
             this.panel_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(108)))), ((int)(((byte)(152)))));
+            this.panel_menu.Controls.Add(this.button2);
+            this.panel_menu.Controls.Add(this.button1);
             this.panel_menu.Controls.Add(this.button_checkinout);
             this.panel_menu.Controls.Add(this.btn_dangxuat);
             this.panel_menu.Controls.Add(this.button_account);
@@ -59,14 +63,119 @@ namespace GUI
             this.panel_menu.Controls.Add(this.button_nhanvien);
             this.panel_menu.Controls.Add(this.button_nv);
             this.panel_menu.Controls.Add(this.button_hoadon);
-            this.panel_menu.Controls.Add(this.button_danhmuc);
+            this.panel_menu.Controls.Add(this.button_trangchu);
             this.panel_menu.Controls.Add(this.panel_logo);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Margin = new System.Windows.Forms.Padding(2);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(225, 771);
+            this.panel_menu.Size = new System.Drawing.Size(225, 811);
             this.panel_menu.TabIndex = 0;
+            // 
+            // button_nhanvien
+            // 
+            this.button_nhanvien.FlatAppearance.BorderSize = 0;
+            this.button_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_nhanvien.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button_nhanvien.ForeColor = System.Drawing.Color.Transparent;
+            this.button_nhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_nhanvien.Location = new System.Drawing.Point(0, 307);
+            this.button_nhanvien.Margin = new System.Windows.Forms.Padding(2);
+            this.button_nhanvien.Name = "button_nhanvien";
+            this.button_nhanvien.Size = new System.Drawing.Size(225, 73);
+            this.button_nhanvien.TabIndex = 4;
+            this.button_nhanvien.Text = "Nhân Viên";
+            this.button_nhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_nhanvien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_nhanvien.UseVisualStyleBackColor = true;
+            // 
+            // panel_logo
+            // 
+            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(225, 92);
+            this.panel_logo.TabIndex = 0;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelTitleBar.Controls.Add(this.lblTiltle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.panelTitleBar.Location = new System.Drawing.Point(225, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1001, 88);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.TabStop = true;
+            // 
+            // lblTiltle
+            // 
+            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiltle.ForeColor = System.Drawing.Color.White;
+            this.lblTiltle.Location = new System.Drawing.Point(344, 16);
+            this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTiltle.Name = "lblTiltle";
+            this.lblTiltle.Size = new System.Drawing.Size(439, 55);
+            this.lblTiltle.TabIndex = 0;
+            this.lblTiltle.Text = "Home";
+            this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel_childForm
+            // 
+            this.panel_childForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel_childForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_childForm.Location = new System.Drawing.Point(225, 88);
+            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_childForm.Name = "panel_childForm";
+            this.panel_childForm.Size = new System.Drawing.Size(1001, 723);
+            this.panel_childForm.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Image = global::GUI.Properties.Resources.scheduler;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 599);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(225, 73);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Lịch làm việc";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.Image = global::GUI.Properties.Resources.checkin;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 526);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(225, 73);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Ca làm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button_checkinout
             // 
@@ -97,7 +206,7 @@ namespace GUI
             this.btn_dangxuat.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_dangxuat.Image = global::GUI.Properties.Resources.dangxuat32px;
             this.btn_dangxuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dangxuat.Location = new System.Drawing.Point(0, 705);
+            this.btn_dangxuat.Location = new System.Drawing.Point(0, 745);
             this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_dangxuat.Name = "btn_dangxuat";
             this.btn_dangxuat.Padding = new System.Windows.Forms.Padding(10, 0, 25, 0);
@@ -146,23 +255,6 @@ namespace GUI
             this.button_khachhang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_khachhang.UseVisualStyleBackColor = true;
             // 
-            // button_nhanvien
-            // 
-            this.button_nhanvien.FlatAppearance.BorderSize = 0;
-            this.button_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_nhanvien.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_nhanvien.ForeColor = System.Drawing.Color.Transparent;
-            this.button_nhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_nhanvien.Location = new System.Drawing.Point(0, 307);
-            this.button_nhanvien.Margin = new System.Windows.Forms.Padding(2);
-            this.button_nhanvien.Name = "button_nhanvien";
-            this.button_nhanvien.Size = new System.Drawing.Size(225, 73);
-            this.button_nhanvien.TabIndex = 4;
-            this.button_nhanvien.Text = "Nhân Viên";
-            this.button_nhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_nhanvien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_nhanvien.UseVisualStyleBackColor = true;
-            // 
             // button_nv
             // 
             this.button_nv.Dock = System.Windows.Forms.DockStyle.Top;
@@ -202,80 +294,30 @@ namespace GUI
             this.button_hoadon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_hoadon.UseVisualStyleBackColor = true;
             // 
-            // button_danhmuc
+            // button_trangchu
             // 
-            this.button_danhmuc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_danhmuc.FlatAppearance.BorderSize = 0;
-            this.button_danhmuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_danhmuc.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_danhmuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_danhmuc.Image = global::GUI.Properties.Resources.list1;
-            this.button_danhmuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_danhmuc.Location = new System.Drawing.Point(0, 92);
-            this.button_danhmuc.Margin = new System.Windows.Forms.Padding(2);
-            this.button_danhmuc.Name = "button_danhmuc";
-            this.button_danhmuc.Size = new System.Drawing.Size(225, 69);
-            this.button_danhmuc.TabIndex = 1;
-            this.button_danhmuc.Text = "Danh Mục";
-            this.button_danhmuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_danhmuc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_danhmuc.UseVisualStyleBackColor = true;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.panelTitleBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelTitleBar.Controls.Add(this.lblTiltle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panelTitleBar.Location = new System.Drawing.Point(225, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(938, 88);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.TabStop = true;
-            // 
-            // lblTiltle
-            // 
-            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiltle.ForeColor = System.Drawing.Color.White;
-            this.lblTiltle.Location = new System.Drawing.Point(344, 16);
-            this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTiltle.Name = "lblTiltle";
-            this.lblTiltle.Size = new System.Drawing.Size(376, 55);
-            this.lblTiltle.TabIndex = 0;
-            this.lblTiltle.Text = "Home";
-            this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel_childForm
-            // 
-            this.panel_childForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel_childForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_childForm.Location = new System.Drawing.Point(225, 88);
-            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_childForm.Name = "panel_childForm";
-            this.panel_childForm.Size = new System.Drawing.Size(938, 683);
-            this.panel_childForm.TabIndex = 2;
-            // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(225, 92);
-            this.panel_logo.TabIndex = 0;
+            this.button_trangchu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_trangchu.FlatAppearance.BorderSize = 0;
+            this.button_trangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_trangchu.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button_trangchu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button_trangchu.Image = global::GUI.Properties.Resources.list1;
+            this.button_trangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_trangchu.Location = new System.Drawing.Point(0, 92);
+            this.button_trangchu.Margin = new System.Windows.Forms.Padding(2);
+            this.button_trangchu.Name = "button_trangchu";
+            this.button_trangchu.Size = new System.Drawing.Size(225, 69);
+            this.button_trangchu.TabIndex = 1;
+            this.button_trangchu.Text = "Trang chủ";
+            this.button_trangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_trangchu.UseVisualStyleBackColor = true;
             // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1163, 771);
+            this.ClientSize = new System.Drawing.Size(1226, 811);
             this.Controls.Add(this.panel_childForm);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panel_menu);
@@ -297,7 +339,7 @@ namespace GUI
         private System.Windows.Forms.Button button_nhanvien;
         private System.Windows.Forms.Button button_nv;
         private System.Windows.Forms.Button button_hoadon;
-        private System.Windows.Forms.Button button_danhmuc;
+        private System.Windows.Forms.Button button_trangchu;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTiltle;
         private System.Windows.Forms.Panel panel_childForm;
@@ -305,6 +347,8 @@ namespace GUI
         private System.Windows.Forms.Button btn_dangxuat;
         private Button button_checkinout;
         private Panel panel_logo;
+        private Button button2;
+        private Button button1;
     }
 }
 

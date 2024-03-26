@@ -16,3 +16,5 @@ E:\QLHOTEL\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 E:\QLHOTEL\GUI\obj\Debug\GUI.csproj.CopyComplete
 E:\QLHOTEL\GUI\obj\Debug\GUI.exe
 E:\QLHOTEL\GUI\obj\Debug\GUI.pdb
+E:\QLHOTEL\GUI\obj\Debug\GUI.DanhSachTaiKhoan.resources
+E:\QLHOTEL\GUI\obj\Debug\GUI.FormLichLamViec.resources
