@@ -42,13 +42,12 @@ namespace GUI
                 if (currentButton != (Button)btnSender)
                 {
                     DisableButton();
-
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     //panelTitleBar.BackColor = color;
-                    panel_logo.BackColor = Color.White;
+                    panel_logo.BackColor = Color.Transparent;
                 }
             }
         }
@@ -59,7 +58,7 @@ namespace GUI
                 if (previousBtn.GetType() == typeof(Button))
                 {
                     previousBtn.BackColor = Color.FromArgb(82, 108, 152);
-                    previousBtn.ForeColor = Color.Transparent;
+                    previousBtn.ForeColor = Color.FromArgb(224, 224, 224);
                     previousBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }

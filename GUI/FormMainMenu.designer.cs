@@ -40,14 +40,12 @@ namespace GUI
             this.button_nhanvien = new System.Windows.Forms.Button();
             this.button_nv = new System.Windows.Forms.Button();
             this.button_hoadon = new System.Windows.Forms.Button();
-            this.panel_logo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button_danhmuc = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTiltle = new System.Windows.Forms.Label();
             this.panel_childForm = new System.Windows.Forms.Panel();
-            this.button_danhmuc = new System.Windows.Forms.Button();
+            this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_menu.SuspendLayout();
-            this.panel_logo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +74,7 @@ namespace GUI
             this.button_checkinout.FlatAppearance.BorderSize = 0;
             this.button_checkinout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_checkinout.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_checkinout.ForeColor = System.Drawing.Color.Transparent;
+            this.button_checkinout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button_checkinout.Image = global::GUI.Properties.Resources.checkin;
             this.button_checkinout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_checkinout.Location = new System.Drawing.Point(0, 453);
@@ -115,7 +113,7 @@ namespace GUI
             this.button_account.FlatAppearance.BorderSize = 0;
             this.button_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_account.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_account.ForeColor = System.Drawing.Color.Transparent;
+            this.button_account.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button_account.Image = global::GUI.Properties.Resources.teamwork;
             this.button_account.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_account.Location = new System.Drawing.Point(0, 380);
@@ -135,7 +133,7 @@ namespace GUI
             this.button_khachhang.FlatAppearance.BorderSize = 0;
             this.button_khachhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_khachhang.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_khachhang.ForeColor = System.Drawing.Color.Transparent;
+            this.button_khachhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button_khachhang.Image = global::GUI.Properties.Resources.customer;
             this.button_khachhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_khachhang.Location = new System.Drawing.Point(0, 307);
@@ -171,7 +169,7 @@ namespace GUI
             this.button_nv.FlatAppearance.BorderSize = 0;
             this.button_nv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_nv.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_nv.ForeColor = System.Drawing.Color.Transparent;
+            this.button_nv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button_nv.Image = global::GUI.Properties.Resources.employee;
             this.button_nv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_nv.Location = new System.Drawing.Point(0, 234);
@@ -191,7 +189,7 @@ namespace GUI
             this.button_hoadon.FlatAppearance.BorderSize = 0;
             this.button_hoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_hoadon.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_hoadon.ForeColor = System.Drawing.Color.Transparent;
+            this.button_hoadon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button_hoadon.Image = global::GUI.Properties.Resources.bill__1_;
             this.button_hoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_hoadon.Location = new System.Drawing.Point(0, 161);
@@ -204,25 +202,24 @@ namespace GUI
             this.button_hoadon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_hoadon.UseVisualStyleBackColor = true;
             // 
-            // panel_logo
+            // button_danhmuc
             // 
-            this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panel_logo.Controls.Add(this.label1);
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(225, 92);
-            this.panel_logo.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 92);
-            this.label1.TabIndex = 0;
+            this.button_danhmuc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_danhmuc.FlatAppearance.BorderSize = 0;
+            this.button_danhmuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_danhmuc.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button_danhmuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button_danhmuc.Image = global::GUI.Properties.Resources.list1;
+            this.button_danhmuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_danhmuc.Location = new System.Drawing.Point(0, 92);
+            this.button_danhmuc.Margin = new System.Windows.Forms.Padding(2);
+            this.button_danhmuc.Name = "button_danhmuc";
+            this.button_danhmuc.Size = new System.Drawing.Size(225, 69);
+            this.button_danhmuc.TabIndex = 1;
+            this.button_danhmuc.Text = "Danh Mục";
+            this.button_danhmuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_danhmuc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_danhmuc.UseVisualStyleBackColor = true;
             // 
             // panelTitleBar
             // 
@@ -264,24 +261,15 @@ namespace GUI
             this.panel_childForm.Size = new System.Drawing.Size(938, 683);
             this.panel_childForm.TabIndex = 2;
             // 
-            // button_danhmuc
+            // panel_logo
             // 
-            this.button_danhmuc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_danhmuc.FlatAppearance.BorderSize = 0;
-            this.button_danhmuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_danhmuc.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_danhmuc.ForeColor = System.Drawing.Color.Transparent;
-            this.button_danhmuc.Image = global::GUI.Properties.Resources.list1;
-            this.button_danhmuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_danhmuc.Location = new System.Drawing.Point(0, 92);
-            this.button_danhmuc.Margin = new System.Windows.Forms.Padding(2);
-            this.button_danhmuc.Name = "button_danhmuc";
-            this.button_danhmuc.Size = new System.Drawing.Size(225, 69);
-            this.button_danhmuc.TabIndex = 1;
-            this.button_danhmuc.Text = "Danh Mục";
-            this.button_danhmuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_danhmuc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_danhmuc.UseVisualStyleBackColor = true;
+            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(225, 92);
+            this.panel_logo.TabIndex = 0;
             // 
             // FormMainMenu
             // 
@@ -297,7 +285,6 @@ namespace GUI
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panel_menu.ResumeLayout(false);
-            this.panel_logo.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -316,9 +303,8 @@ namespace GUI
         private System.Windows.Forms.Panel panel_childForm;
         private System.Windows.Forms.Button button_account;
         private System.Windows.Forms.Button btn_dangxuat;
-        private System.Windows.Forms.Panel panel_logo;
-        private System.Windows.Forms.Label label1;
         private Button button_checkinout;
+        private Panel panel_logo;
     }
 }
 
