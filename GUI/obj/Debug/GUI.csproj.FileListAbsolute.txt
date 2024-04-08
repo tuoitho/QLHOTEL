@@ -21,3 +21,6 @@ E:\QLHOTEL\GUI\obj\Debug\GUI.exe
 E:\QLHOTEL\GUI\obj\Debug\GUI.pdb
 E:\QLHOTEL\GUI\obj\Debug\GUI.FormCheckInOut.resources
 E:\QLHOTEL\GUI\obj\Debug\GUI.FormLogin.resources
+E:\QLHOTEL\GUI\obj\Debug\GUI.FormPhong.resources
+E:\QLHOTEL\GUI\obj\Debug\GUI.FormHoaDon.resources
+E:\QLHOTEL\GUI\obj\Debug\GUI.FormKhachHang.resources

@@ -274,7 +274,31 @@ namespace GUI
                 this.button_khachhang.Text = "  Khách hàng";
                 this.button_nv.Text = "  Nhân viên";
                 this.button_trangchu.Text = "  Trang chủ";
+                this.button_bill.Text = "  Hóa đơn";
+                this.button_phong.Text = "  Phòng";
+                this.button_dichvu.Text = "  Dịch vụ";
             }
+        }
+
+        private void button_phong_Click(object sender, EventArgs e)
+        {
+            FormPhong formPhong = new FormPhong();
+            OpenChildForm(formPhong, sender);
+            lblTiltle.Text = "Phòng";
+        }
+
+        private void button_khachhang_Click(object sender, EventArgs e)
+        {
+            FormKhachHang formKhachHang = new FormKhachHang();
+            OpenChildForm(formKhachHang, sender);
+            lblTiltle.Text = "Khách hàng";
+        }
+
+        private void button_bill_Click(object sender, EventArgs e)
+        {
+            FormHoaDon formHoaDon = new FormHoaDon();
+            OpenChildForm(formHoaDon, sender);
+            lblTiltle.Text = "Hóa đơn";
         }
     }
 }
