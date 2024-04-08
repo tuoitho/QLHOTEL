@@ -33,10 +33,6 @@ namespace GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panel_menu = new System.Windows.Forms.Panel();
-            this.panel_logo = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTiltle = new System.Windows.Forms.Label();
-            this.panel_childForm = new System.Windows.Forms.Panel();
             this.button_dichvu = new GUI.RoundedButton();
             this.button_phong = new GUI.RoundedButton();
             this.button_bill = new GUI.RoundedButton();
@@ -47,7 +43,11 @@ namespace GUI
             this.button_khachhang = new GUI.RoundedButton();
             this.button_nv = new GUI.RoundedButton();
             this.button_trangchu = new GUI.RoundedButton();
+            this.panel_logo = new System.Windows.Forms.Panel();
             this.roundedButton1 = new GUI.RoundedButton();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblTiltle = new System.Windows.Forms.Label();
+            this.panel_childForm = new System.Windows.Forms.Panel();
             this.panel_menu.SuspendLayout();
             this.panel_logo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -75,58 +75,6 @@ namespace GUI
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(281, 811);
             this.panel_menu.TabIndex = 0;
-            // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
-            this.panel_logo.Controls.Add(this.roundedButton1);
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(281, 92);
-            this.panel_logo.TabIndex = 0;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.panelTitleBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelTitleBar.Controls.Add(this.lblTiltle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panelTitleBar.Location = new System.Drawing.Point(281, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(963, 88);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.TabStop = true;
-            // 
-            // lblTiltle
-            // 
-            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiltle.ForeColor = System.Drawing.Color.White;
-            this.lblTiltle.Location = new System.Drawing.Point(344, 16);
-            this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTiltle.Name = "lblTiltle";
-            this.lblTiltle.Size = new System.Drawing.Size(203, 55);
-            this.lblTiltle.TabIndex = 0;
-            this.lblTiltle.Text = "Home";
-            this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel_childForm
-            // 
-            this.panel_childForm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_childForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_childForm.Location = new System.Drawing.Point(281, 88);
-            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_childForm.Name = "panel_childForm";
-            this.panel_childForm.Size = new System.Drawing.Size(963, 740);
-            this.panel_childForm.TabIndex = 2;
-            this.panel_childForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_childForm_Paint);
             // 
             // button_dichvu
             // 
@@ -337,6 +285,17 @@ namespace GUI
             this.button_trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_trangchu.UseVisualStyleBackColor = true;
             // 
+            // panel_logo
+            // 
+            this.panel_logo.BackColor = System.Drawing.Color.Transparent;
+            this.panel_logo.Controls.Add(this.roundedButton1);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(281, 92);
+            this.panel_logo.TabIndex = 0;
+            // 
             // roundedButton1
             // 
             this.roundedButton1.BackColor = System.Drawing.Color.Transparent;
@@ -357,6 +316,47 @@ namespace GUI
             this.roundedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.roundedButton1.UseVisualStyleBackColor = false;
             this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click_1);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelTitleBar.Controls.Add(this.lblTiltle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.panelTitleBar.Location = new System.Drawing.Point(281, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(963, 88);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.TabStop = true;
+            // 
+            // lblTiltle
+            // 
+            this.lblTiltle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiltle.ForeColor = System.Drawing.Color.White;
+            this.lblTiltle.Location = new System.Drawing.Point(344, 16);
+            this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTiltle.Name = "lblTiltle";
+            this.lblTiltle.Size = new System.Drawing.Size(203, 55);
+            this.lblTiltle.TabIndex = 0;
+            this.lblTiltle.Text = "Home";
+            this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel_childForm
+            // 
+            this.panel_childForm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_childForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_childForm.Location = new System.Drawing.Point(281, 88);
+            this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_childForm.Name = "panel_childForm";
+            this.panel_childForm.Size = new System.Drawing.Size(963, 740);
+            this.panel_childForm.TabIndex = 2;
+            this.panel_childForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_childForm_Paint);
             // 
             // FormMainMenu
             // 
