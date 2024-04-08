@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -15,6 +16,8 @@ namespace GUI
 
     public partial class FormMainMenu : Form
     {
+        public static int EmployeeID;
+        public static int PositionID;
 
         private Button currentButton;
         private Random random;
@@ -28,6 +31,15 @@ namespace GUI
         public FormMainMenu()
         {
             InitializeComponent();
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, button_nv.Width / 2, button_nv.Height / 2, 280, 190); // Bo tròn góc trên trái
+            path.AddArc(button_nv.Width / 2, 0, button_nv.Width / 2, button_nv.Height / 2, 90, 90); // Bo tròn góc trên phải
+            path.AddArc(button_nv.Width / 2, button_nv.Height / 2, button_nv.Width / 2, button_nv.Height / 2, 0, 90); // Bo tròn góc dưới phải
+            path.AddArc(0, button_nv.Height / 2, button_nv.Width / 2, button_nv.Height / 2, 270, 90); // Bo tròn góc dưới trái
+            using (Graphics g = button_nv.CreateGraphics())
+            {
+                g.FillPath(Brushes.Blue, path);
+            }
         }
         public FormMainMenu(String username, String password, Boolean fsysRole)
         {
@@ -36,16 +48,39 @@ namespace GUI
 
         private void ActivateButton(object btnSender)
         {
-            Color color = Color.FromArgb(4, 72, 98);
+
+            Color color = Color.FromArgb(0, 108, 225);
             if (btnSender != null)
             {
-                if (currentButton != (Button)btnSender)
+
+                if (currentButton != (RoundedButton)btnSender)
                 {
+
+                    currentButton = (RoundedButton)btnSender;
+                    if (currentButton == button_trangchu)
+                    {
+                        currentButton.Image = global::GUI.Properties.Resources.hometrang;
+                    }
+                    if (currentButton == button_khachhang)
+                    {
+                        currentButton.Image = global::GUI.Properties.Resources.khachhangtrang;
+                    }
+                    if (currentButton == button_account)
+                    {
+                        currentButton.Image = global::GUI.Properties.Resources.usertrang;
+                    }
+                    if (currentButton == button_nv)
+                    {
+                        currentButton.Image = global::GUI.Properties.Resources.employeetrang;
+                    }
+                    if (currentButton == button_checkinout)
+                    {
+                        currentButton.Image = global::GUI.Properties.Resources.location__1_;
+                    }
                     DisableButton();
-                    currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    currentButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     //panelTitleBar.BackColor = color;
                     panel_logo.BackColor = Color.Transparent;
                 }
@@ -53,15 +88,44 @@ namespace GUI
         }
         private void DisableButton()
         {
+            this.button_lich.Image = global::GUI.Properties.Resources.scheduler;
+            this.button_ca.Image = global::GUI.Properties.Resources.checkin;
+            this.button_checkinout.Image = global::GUI.Properties.Resources.location;
+            this.button_account.Image = global::GUI.Properties.Resources.userden;
+            this.button_khachhang.Image = global::GUI.Properties.Resources.khachhangden;
+            this.button_trangchu.Image = global::GUI.Properties.Resources.homeden;
+            this.button_nv.Image = global::GUI.Properties.Resources.employeeden;
+            if (currentButton == button_trangchu)
+            {
+                currentButton.Image = global::GUI.Properties.Resources.hometrang;
+            }
+            if (currentButton == button_khachhang)
+            {
+                currentButton.Image = global::GUI.Properties.Resources.khachhangtrang;
+            }
+            if (currentButton == button_account)
+            {
+                currentButton.Image = global::GUI.Properties.Resources.usertrang;
+            }
+            if (currentButton == button_nv)
+            {
+                currentButton.Image = global::GUI.Properties.Resources.employeetrang;
+            }
+            if (currentButton == button_checkinout)
+            {
+                currentButton.Image = global::GUI.Properties.Resources.location__1_;
+            }
+
             foreach (Control previousBtn in panel_menu.Controls)
             {
-                if (previousBtn.GetType() == typeof(Button))
+                if (previousBtn.GetType() == typeof(RoundedButton))
                 {
-                    previousBtn.BackColor = Color.FromArgb(82, 108, 152);
-                    previousBtn.ForeColor = Color.FromArgb(224, 224, 224);
-                    previousBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    previousBtn.BackColor = Color.White;
+                    previousBtn.ForeColor = Color.Black;
+                    previousBtn.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
+
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -147,6 +211,70 @@ namespace GUI
             FormNhanVien formNhanVien = new FormNhanVien();
             OpenChildForm(formNhanVien, sender);
             lblTiltle.Text = "Nhân viên";
+        }
+
+        private void panel_childForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        bool isCollapsed = false;
+        private void roundedButton1_Click(object sender, EventArgs e)
+        {
+            if (!isCollapsed)
+            {
+                panel_menu.Size = panel_menu.MinimumSize;
+                foreach (Control bt in panel_menu.Controls)
+                {
+                    if (bt.GetType() == typeof(RoundedButton))
+                    {
+                        bt.Text = "";
+                    }
+                }
+                isCollapsed = true;
+            }
+            else
+            {
+                panel_menu.Size = panel_menu.MaximumSize;
+                isCollapsed = false;
+                this.button_lich.Text = "  Lịch làm việc";
+                this.button_ca.Text = "  Ca làm";
+                this.button_checkinout.Text = "  Check in/out";
+                this.btn_dangxuat.Text = "Đăng xuất";
+                this.button_account.Text = "  Quản lý tài khoản";
+                this.button_khachhang.Text = "  Khách hàng";
+                this.button_nv.Text = "  Nhân viên";
+                this.button_trangchu.Text = "  Trang chủ";
+            }
+            
+        }
+
+        private void roundedButton1_Click_1(object sender, EventArgs e)
+        {
+            if (!isCollapsed)
+            {
+                panel_menu.Size = panel_menu.MinimumSize;
+                foreach (Control bt in panel_menu.Controls)
+                {
+                    if (bt.GetType() == typeof(RoundedButton))
+                    {
+                        bt.Text = "";
+                    }
+                }
+                isCollapsed = true;
+            }
+            else
+            {
+                panel_menu.Size = panel_menu.MaximumSize;
+                isCollapsed = false;
+                this.button_lich.Text = "  Lịch làm việc";
+                this.button_ca.Text = "  Ca làm";
+                this.button_checkinout.Text = "  Check in/out";
+                this.btn_dangxuat.Text = "Đăng xuất";
+                this.button_account.Text = "  Quản lý tài khoản";
+                this.button_khachhang.Text = "  Khách hàng";
+                this.button_nv.Text = "  Nhân viên";
+                this.button_trangchu.Text = "  Trang chủ";
+            }
         }
     }
 }

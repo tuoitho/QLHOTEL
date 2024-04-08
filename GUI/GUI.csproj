@@ -103,6 +103,12 @@
     <Compile Include="FormLichLamViec.Designer.cs">
       <DependentUpon>FormLichLamViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,24 +127,36 @@
     <Compile Include="FormThayThe.Designer.cs">
       <DependentUpon>FormThayThe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLHotelDataSet.Designer.cs">
+    <Compile Include="HotelManagementDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLHotelDataSet.xsd</DependentUpon>
+      <DependentUpon>HotelManagementDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundedButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="DanhSachTaiKhoan.resx">
       <DependentUpon>DanhSachTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckInOut.resx">
+      <DependentUpon>FormCheckInOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLichLamViec.resx">
       <DependentUpon>FormLichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThayThe.resx">
+      <DependentUpon>FormThayThe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,6 +168,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="HotelManagementDataSet1.xsc">
+      <DependentUpon>HotelManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HotelManagementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelManagementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelManagementDataSet1.xss">
+      <DependentUpon>HotelManagementDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,6 +196,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{8bcbf1a8-75ae-4488-8dbc-8074396b54aa}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{cef3eab7-77ac-4aa3-a69e-1299b088c390}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{7436887e-7c8a-4f91-9f2e-1206c700126d}</Project>
@@ -186,17 +219,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLHotelDataSet.xsc">
-      <DependentUpon>QLHotelDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLHotelDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLHotelDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLHotelDataSet.xss">
-      <DependentUpon>QLHotelDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\6u2ywY.jpeg" />
   </ItemGroup>
   <ItemGroup>
@@ -402,6 +424,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\scheduler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hometrang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeetrang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeden1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hometrang1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khachhangden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khachhangtrang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usertrang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

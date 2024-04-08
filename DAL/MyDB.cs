@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace DAL
 {
     public class MyDB
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=TUOITHO\SQLEXPRESS;Initial Catalog=QLHotel;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;");
+        SqlConnection conn = new SqlConnection(@"Data Source=TUOITHO\SQLEXPRESS;Initial Catalog=HotelManagement;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True");
         public SqlConnection GetConnection
         {
             get
@@ -31,5 +32,7 @@ namespace DAL
                 conn.Close();
             }
         }
+
     }
 }
+

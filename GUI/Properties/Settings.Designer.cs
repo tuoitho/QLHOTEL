@@ -26,11 +26,11 @@ namespace GUI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TUOITHO\\SQLEXPRESS;Initial Catalog=QLHotel;Integrated Security=True;T" +
-            "rustServerCertificate=True")]
-        public string QLHotelConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TUOITHO\\SQLEXPRESS;Initial Catalog=HotelManagement;Integrated Securit" +
+            "y=True;Encrypt=True;TrustServerCertificate=True")]
+        public string HotelManagementConnectionString {
             get {
-                return ((string)(this["QLHotelConnectionString"]));
+                return ((string)(this["HotelManagementConnectionString"]));
             }
         }
     }

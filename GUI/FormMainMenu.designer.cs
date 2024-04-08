@@ -33,70 +33,58 @@ namespace GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panel_menu = new System.Windows.Forms.Panel();
-            this.button_nhanvien = new System.Windows.Forms.Button();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTiltle = new System.Windows.Forms.Label();
             this.panel_childForm = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button_checkinout = new System.Windows.Forms.Button();
-            this.btn_dangxuat = new System.Windows.Forms.Button();
-            this.button_account = new System.Windows.Forms.Button();
-            this.button_khachhang = new System.Windows.Forms.Button();
-            this.button_nv = new System.Windows.Forms.Button();
-            this.button_hoadon = new System.Windows.Forms.Button();
-            this.button_trangchu = new System.Windows.Forms.Button();
+            this.button_lich = new GUI.RoundedButton();
+            this.button_ca = new GUI.RoundedButton();
+            this.button_checkinout = new GUI.RoundedButton();
+            this.btn_dangxuat = new GUI.RoundedButton();
+            this.button_account = new GUI.RoundedButton();
+            this.button_khachhang = new GUI.RoundedButton();
+            this.button_nv = new GUI.RoundedButton();
+            this.button_trangchu = new GUI.RoundedButton();
+            this.roundedButton1 = new GUI.RoundedButton();
+            this.button_bill = new GUI.RoundedButton();
+            this.button_phong = new GUI.RoundedButton();
             this.panel_menu.SuspendLayout();
+            this.panel_logo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_menu
             // 
-            this.panel_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(108)))), ((int)(((byte)(152)))));
-            this.panel_menu.Controls.Add(this.button2);
-            this.panel_menu.Controls.Add(this.button1);
+            this.panel_menu.BackColor = System.Drawing.Color.White;
+            this.panel_menu.Controls.Add(this.button_phong);
+            this.panel_menu.Controls.Add(this.button_bill);
+            this.panel_menu.Controls.Add(this.button_lich);
+            this.panel_menu.Controls.Add(this.button_ca);
             this.panel_menu.Controls.Add(this.button_checkinout);
             this.panel_menu.Controls.Add(this.btn_dangxuat);
             this.panel_menu.Controls.Add(this.button_account);
             this.panel_menu.Controls.Add(this.button_khachhang);
-            this.panel_menu.Controls.Add(this.button_nhanvien);
             this.panel_menu.Controls.Add(this.button_nv);
-            this.panel_menu.Controls.Add(this.button_hoadon);
             this.panel_menu.Controls.Add(this.button_trangchu);
             this.panel_menu.Controls.Add(this.panel_logo);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_menu.MaximumSize = new System.Drawing.Size(225, 649);
+            this.panel_menu.MinimumSize = new System.Drawing.Size(58, 649);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(225, 811);
+            this.panel_menu.Size = new System.Drawing.Size(225, 649);
             this.panel_menu.TabIndex = 0;
-            // 
-            // button_nhanvien
-            // 
-            this.button_nhanvien.FlatAppearance.BorderSize = 0;
-            this.button_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_nhanvien.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_nhanvien.ForeColor = System.Drawing.Color.Transparent;
-            this.button_nhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_nhanvien.Location = new System.Drawing.Point(0, 307);
-            this.button_nhanvien.Margin = new System.Windows.Forms.Padding(2);
-            this.button_nhanvien.Name = "button_nhanvien";
-            this.button_nhanvien.Size = new System.Drawing.Size(225, 73);
-            this.button_nhanvien.TabIndex = 4;
-            this.button_nhanvien.Text = "Nhân Viên";
-            this.button_nhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_nhanvien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_nhanvien.UseVisualStyleBackColor = true;
             // 
             // panel_logo
             // 
             this.panel_logo.BackColor = System.Drawing.Color.Transparent;
+            this.panel_logo.Controls.Add(this.roundedButton1);
             this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_logo.Location = new System.Drawing.Point(0, 0);
             this.panel_logo.Margin = new System.Windows.Forms.Padding(2);
             this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(225, 92);
+            this.panel_logo.Size = new System.Drawing.Size(225, 74);
             this.panel_logo.TabIndex = 0;
             // 
             // panelTitleBar
@@ -109,7 +97,7 @@ namespace GUI
             this.panelTitleBar.Location = new System.Drawing.Point(225, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1001, 88);
+            this.panelTitleBar.Size = new System.Drawing.Size(756, 70);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.TabStop = true;
             // 
@@ -120,97 +108,102 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTiltle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTiltle.ForeColor = System.Drawing.Color.White;
-            this.lblTiltle.Location = new System.Drawing.Point(344, 16);
+            this.lblTiltle.Location = new System.Drawing.Point(275, 13);
             this.lblTiltle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTiltle.Name = "lblTiltle";
-            this.lblTiltle.Size = new System.Drawing.Size(439, 55);
+            this.lblTiltle.Size = new System.Drawing.Size(148, 44);
             this.lblTiltle.TabIndex = 0;
             this.lblTiltle.Text = "Home";
             this.lblTiltle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel_childForm
             // 
-            this.panel_childForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel_childForm.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel_childForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_childForm.Location = new System.Drawing.Point(225, 88);
+            this.panel_childForm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_childForm.Location = new System.Drawing.Point(225, 71);
             this.panel_childForm.Margin = new System.Windows.Forms.Padding(2);
             this.panel_childForm.Name = "panel_childForm";
-            this.panel_childForm.Size = new System.Drawing.Size(1001, 723);
+            this.panel_childForm.Size = new System.Drawing.Size(756, 578);
             this.panel_childForm.TabIndex = 2;
+            this.panel_childForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_childForm_Paint);
             // 
-            // button2
+            // button_lich
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.Image = global::GUI.Properties.Resources.scheduler;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 599);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 73);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Lịch làm việc";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_lich.BackColor = System.Drawing.Color.Transparent;
+            this.button_lich.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_lich.FlatAppearance.BorderSize = 0;
+            this.button_lich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_lich.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_lich.ForeColor = System.Drawing.Color.Black;
+            this.button_lich.Image = global::GUI.Properties.Resources.scheduler;
+            this.button_lich.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_lich.Location = new System.Drawing.Point(0, 389);
+            this.button_lich.Margin = new System.Windows.Forms.Padding(2);
+            this.button_lich.Name = "button_lich";
+            this.button_lich.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_lich.Size = new System.Drawing.Size(225, 53);
+            this.button_lich.TabIndex = 11;
+            this.button_lich.Text = "  Lịch làm việc";
+            this.button_lich.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_lich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_lich.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // button_ca
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Image = global::GUI.Properties.Resources.checkin;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 526);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 73);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Ca làm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_ca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_ca.FlatAppearance.BorderSize = 0;
+            this.button_ca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ca.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ca.ForeColor = System.Drawing.Color.Black;
+            this.button_ca.Image = global::GUI.Properties.Resources.checkin;
+            this.button_ca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_ca.Location = new System.Drawing.Point(0, 336);
+            this.button_ca.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ca.Name = "button_ca";
+            this.button_ca.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_ca.Size = new System.Drawing.Size(225, 53);
+            this.button_ca.TabIndex = 10;
+            this.button_ca.Text = "  Ca làm";
+            this.button_ca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_ca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_ca.UseVisualStyleBackColor = true;
             // 
             // button_checkinout
             // 
             this.button_checkinout.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_checkinout.FlatAppearance.BorderSize = 0;
             this.button_checkinout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_checkinout.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_checkinout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_checkinout.Image = global::GUI.Properties.Resources.checkin;
+            this.button_checkinout.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_checkinout.ForeColor = System.Drawing.Color.Black;
+            this.button_checkinout.Image = global::GUI.Properties.Resources.location;
             this.button_checkinout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_checkinout.Location = new System.Drawing.Point(0, 453);
+            this.button_checkinout.Location = new System.Drawing.Point(0, 283);
             this.button_checkinout.Margin = new System.Windows.Forms.Padding(2);
             this.button_checkinout.Name = "button_checkinout";
-            this.button_checkinout.Size = new System.Drawing.Size(225, 73);
+            this.button_checkinout.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_checkinout.Size = new System.Drawing.Size(225, 53);
             this.button_checkinout.TabIndex = 9;
-            this.button_checkinout.Text = "Check in/out";
+            this.button_checkinout.Text = "  Check in/out";
             this.button_checkinout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_checkinout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_checkinout.UseVisualStyleBackColor = true;
             // 
             // btn_dangxuat
             // 
-            this.btn_dangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(108)))), ((int)(((byte)(152)))));
+            this.btn_dangxuat.BackColor = System.Drawing.Color.White;
             this.btn_dangxuat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_dangxuat.FlatAppearance.BorderSize = 0;
             this.btn_dangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dangxuat.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_dangxuat.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_dangxuat.ForeColor = System.Drawing.Color.Black;
             this.btn_dangxuat.Image = global::GUI.Properties.Resources.dangxuat32px;
             this.btn_dangxuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dangxuat.Location = new System.Drawing.Point(0, 745);
+            this.btn_dangxuat.Location = new System.Drawing.Point(0, 596);
             this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_dangxuat.Name = "btn_dangxuat";
-            this.btn_dangxuat.Padding = new System.Windows.Forms.Padding(10, 0, 25, 0);
-            this.btn_dangxuat.Size = new System.Drawing.Size(225, 66);
+            this.btn_dangxuat.Padding = new System.Windows.Forms.Padding(8, 0, 20, 0);
+            this.btn_dangxuat.Size = new System.Drawing.Size(225, 53);
             this.btn_dangxuat.TabIndex = 8;
             this.btn_dangxuat.Text = "Đăng xuất";
             this.btn_dangxuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,16 +214,17 @@ namespace GUI
             this.button_account.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_account.FlatAppearance.BorderSize = 0;
             this.button_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_account.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_account.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_account.Image = global::GUI.Properties.Resources.teamwork;
+            this.button_account.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_account.ForeColor = System.Drawing.Color.Black;
+            this.button_account.Image = global::GUI.Properties.Resources.userden;
             this.button_account.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_account.Location = new System.Drawing.Point(0, 380);
+            this.button_account.Location = new System.Drawing.Point(0, 230);
             this.button_account.Margin = new System.Windows.Forms.Padding(2);
             this.button_account.Name = "button_account";
-            this.button_account.Size = new System.Drawing.Size(225, 73);
+            this.button_account.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_account.Size = new System.Drawing.Size(225, 53);
             this.button_account.TabIndex = 7;
-            this.button_account.Text = "Quản lý tài khoản";
+            this.button_account.Text = "  Quản lý tài khoản";
             this.button_account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_account.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_account.UseVisualStyleBackColor = true;
@@ -241,16 +235,17 @@ namespace GUI
             this.button_khachhang.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_khachhang.FlatAppearance.BorderSize = 0;
             this.button_khachhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_khachhang.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_khachhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_khachhang.Image = global::GUI.Properties.Resources.customer;
+            this.button_khachhang.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_khachhang.ForeColor = System.Drawing.Color.Black;
+            this.button_khachhang.Image = global::GUI.Properties.Resources.khachhangden;
             this.button_khachhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_khachhang.Location = new System.Drawing.Point(0, 307);
+            this.button_khachhang.Location = new System.Drawing.Point(0, 177);
             this.button_khachhang.Margin = new System.Windows.Forms.Padding(2);
             this.button_khachhang.Name = "button_khachhang";
-            this.button_khachhang.Size = new System.Drawing.Size(225, 73);
+            this.button_khachhang.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_khachhang.Size = new System.Drawing.Size(225, 53);
             this.button_khachhang.TabIndex = 5;
-            this.button_khachhang.Text = "Khách hàng";
+            this.button_khachhang.Text = "  Khách hàng";
             this.button_khachhang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_khachhang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_khachhang.UseVisualStyleBackColor = true;
@@ -260,64 +255,110 @@ namespace GUI
             this.button_nv.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_nv.FlatAppearance.BorderSize = 0;
             this.button_nv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_nv.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_nv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_nv.Image = global::GUI.Properties.Resources.employee;
+            this.button_nv.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_nv.ForeColor = System.Drawing.Color.Black;
+            this.button_nv.Image = global::GUI.Properties.Resources.employeeden;
             this.button_nv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_nv.Location = new System.Drawing.Point(0, 234);
+            this.button_nv.Location = new System.Drawing.Point(0, 124);
             this.button_nv.Margin = new System.Windows.Forms.Padding(2);
             this.button_nv.Name = "button_nv";
-            this.button_nv.Size = new System.Drawing.Size(225, 73);
+            this.button_nv.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_nv.Size = new System.Drawing.Size(225, 53);
             this.button_nv.TabIndex = 3;
-            this.button_nv.Text = "Nhân viên";
+            this.button_nv.Text = "  Nhân viên";
             this.button_nv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_nv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_nv.UseVisualStyleBackColor = true;
             this.button_nv.Click += new System.EventHandler(this.button_nv_Click);
-            // 
-            // button_hoadon
-            // 
-            this.button_hoadon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_hoadon.FlatAppearance.BorderSize = 0;
-            this.button_hoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_hoadon.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_hoadon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_hoadon.Image = global::GUI.Properties.Resources.bill__1_;
-            this.button_hoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_hoadon.Location = new System.Drawing.Point(0, 161);
-            this.button_hoadon.Margin = new System.Windows.Forms.Padding(2);
-            this.button_hoadon.Name = "button_hoadon";
-            this.button_hoadon.Size = new System.Drawing.Size(225, 73);
-            this.button_hoadon.TabIndex = 2;
-            this.button_hoadon.Text = "Hóa Đơn";
-            this.button_hoadon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_hoadon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_hoadon.UseVisualStyleBackColor = true;
             // 
             // button_trangchu
             // 
             this.button_trangchu.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_trangchu.FlatAppearance.BorderSize = 0;
             this.button_trangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_trangchu.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button_trangchu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_trangchu.Image = global::GUI.Properties.Resources.list1;
+            this.button_trangchu.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_trangchu.ForeColor = System.Drawing.Color.Black;
+            this.button_trangchu.Image = global::GUI.Properties.Resources.homeden;
             this.button_trangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_trangchu.Location = new System.Drawing.Point(0, 92);
+            this.button_trangchu.Location = new System.Drawing.Point(0, 74);
             this.button_trangchu.Margin = new System.Windows.Forms.Padding(2);
             this.button_trangchu.Name = "button_trangchu";
-            this.button_trangchu.Size = new System.Drawing.Size(225, 69);
+            this.button_trangchu.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_trangchu.Size = new System.Drawing.Size(225, 50);
             this.button_trangchu.TabIndex = 1;
-            this.button_trangchu.Text = "Trang chủ";
+            this.button_trangchu.Text = "  Trang chủ";
             this.button_trangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_trangchu.UseVisualStyleBackColor = true;
             // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.roundedButton1.FlatAppearance.BorderSize = 0;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.Black;
+            this.roundedButton1.Image = global::GUI.Properties.Resources.menu1;
+            this.roundedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton1.Location = new System.Drawing.Point(0, 21);
+            this.roundedButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.roundedButton1.Size = new System.Drawing.Size(225, 53);
+            this.roundedButton1.TabIndex = 12;
+            this.roundedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click_1);
+            // 
+            // button_bill
+            // 
+            this.button_bill.BackColor = System.Drawing.Color.Transparent;
+            this.button_bill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_bill.FlatAppearance.BorderSize = 0;
+            this.button_bill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_bill.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_bill.ForeColor = System.Drawing.Color.Black;
+            this.button_bill.Image = global::GUI.Properties.Resources.scheduler;
+            this.button_bill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_bill.Location = new System.Drawing.Point(0, 442);
+            this.button_bill.Margin = new System.Windows.Forms.Padding(2);
+            this.button_bill.Name = "button_bill";
+            this.button_bill.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_bill.Size = new System.Drawing.Size(225, 53);
+            this.button_bill.TabIndex = 12;
+            this.button_bill.Text = "  Hoá Đơn";
+            this.button_bill.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_bill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_bill.UseVisualStyleBackColor = false;
+            // 
+            // button_phong
+            // 
+            this.button_phong.BackColor = System.Drawing.Color.Transparent;
+            this.button_phong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_phong.FlatAppearance.BorderSize = 0;
+            this.button_phong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_phong.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_phong.ForeColor = System.Drawing.Color.Black;
+            this.button_phong.Image = global::GUI.Properties.Resources.scheduler;
+            this.button_phong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_phong.Location = new System.Drawing.Point(0, 495);
+            this.button_phong.Margin = new System.Windows.Forms.Padding(2);
+            this.button_phong.Name = "button_phong";
+            this.button_phong.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.button_phong.Size = new System.Drawing.Size(225, 53);
+            this.button_phong.TabIndex = 13;
+            this.button_phong.Text = "  Phòng";
+            this.button_phong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_phong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_phong.UseVisualStyleBackColor = false;
+            // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1226, 811);
+            this.ClientSize = new System.Drawing.Size(981, 649);
             this.Controls.Add(this.panel_childForm);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panel_menu);
@@ -327,6 +368,7 @@ namespace GUI
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panel_menu.ResumeLayout(false);
+            this.panel_logo.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -335,20 +377,21 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.Panel panel_menu;
-        private System.Windows.Forms.Button button_khachhang;
-        private System.Windows.Forms.Button button_nhanvien;
-        private System.Windows.Forms.Button button_nv;
-        private System.Windows.Forms.Button button_hoadon;
-        private System.Windows.Forms.Button button_trangchu;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTiltle;
         private System.Windows.Forms.Panel panel_childForm;
-        private System.Windows.Forms.Button button_account;
-        private System.Windows.Forms.Button btn_dangxuat;
-        private Button button_checkinout;
+        private RoundedButton button_nv;
+        private RoundedButton button_khachhang;
+        private RoundedButton button_trangchu;
+        private RoundedButton button_account;
+        private RoundedButton btn_dangxuat;
+        private RoundedButton button_checkinout;
+        private RoundedButton button_lich;
+        private RoundedButton button_ca;
         private Panel panel_logo;
-        private Button button2;
-        private Button button1;
+        private RoundedButton roundedButton1;
+        private RoundedButton button_phong;
+        private RoundedButton button_bill;
     }
 }
 

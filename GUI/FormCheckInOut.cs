@@ -16,5 +16,17 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void CheckInButton_Click(object sender, EventArgs e)
+        {
+            //check if ko co ca lam viec cua nhan vien
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView_checklist.DataSource = BUS.BUS_Checkin.GetAllCheckins();
+        }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DAL;
 namespace GUI
 {
     internal static class Program
@@ -17,6 +18,9 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMainMenu());
+            FormMainMenu.EmployeeID = 1;
+
+            
         }
     }
 }
