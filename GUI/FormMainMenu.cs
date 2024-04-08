@@ -73,10 +73,7 @@ namespace GUI
                     {
                         currentButton.Image = global::GUI.Properties.Resources.employeetrang;
                     }
-                    if (currentButton == button_checkinout)
-                    {
-                        currentButton.Image = global::GUI.Properties.Resources.location__1_;
-                    }
+
                     DisableButton();
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
@@ -90,7 +87,6 @@ namespace GUI
         {
             this.button_lich.Image = global::GUI.Properties.Resources.scheduler;
             this.button_ca.Image = global::GUI.Properties.Resources.checkin;
-            this.button_checkinout.Image = global::GUI.Properties.Resources.location;
             this.button_account.Image = global::GUI.Properties.Resources.userden;
             this.button_khachhang.Image = global::GUI.Properties.Resources.khachhangden;
             this.button_trangchu.Image = global::GUI.Properties.Resources.homeden;
@@ -111,10 +107,7 @@ namespace GUI
             {
                 currentButton.Image = global::GUI.Properties.Resources.employeetrang;
             }
-            if (currentButton == button_checkinout)
-            {
-                currentButton.Image = global::GUI.Properties.Resources.location__1_;
-            }
+
 
             foreach (Control previousBtn in panel_menu.Controls)
             {
@@ -238,7 +231,6 @@ namespace GUI
                 isCollapsed = false;
                 this.button_lich.Text = "  Lịch làm việc";
                 this.button_ca.Text = "  Ca làm";
-                this.button_checkinout.Text = "  Check in/out";
                 this.btn_dangxuat.Text = "Đăng xuất";
                 this.button_account.Text = "  Quản lý tài khoản";
                 this.button_khachhang.Text = "  Khách hàng";
@@ -268,7 +260,6 @@ namespace GUI
                 isCollapsed = false;
                 this.button_lich.Text = "  Lịch làm việc";
                 this.button_ca.Text = "  Ca làm";
-                this.button_checkinout.Text = "  Check in/out";
                 this.btn_dangxuat.Text = "Đăng xuất";
                 this.button_account.Text = "  Quản lý tài khoản";
                 this.button_khachhang.Text = "  Khách hàng";
