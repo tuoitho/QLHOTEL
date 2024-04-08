@@ -91,6 +91,24 @@
     <Compile Include="FormCheckInOut.Designer.cs">
       <DependentUpon>FormCheckInOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDichVu.Designer.cs">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoaDon.Designer.cs">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKiemTraGioLam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +139,12 @@
     <Compile Include="FormNhanVien.designer.cs">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhong.Designer.cs">
+      <DependentUpon>FormPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThayThe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +167,12 @@
     <EmbeddedResource Include="FormCheckInOut.resx">
       <DependentUpon>FormCheckInOut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHoaDon.resx">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLichLamViec.resx">
       <DependentUpon>FormLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhong.resx">
+      <DependentUpon>FormPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThayThe.resx">
       <DependentUpon>FormThayThe.cs</DependentUpon>
