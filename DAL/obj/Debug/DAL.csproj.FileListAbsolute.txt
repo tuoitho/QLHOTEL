@@ -1,9 +1,0 @@
-E:\QLHOTEL\DAL\bin\Debug\DAL.dll
-E:\QLHOTEL\DAL\bin\Debug\DAL.pdb
-E:\QLHOTEL\DAL\bin\Debug\DTO.dll
-E:\QLHOTEL\DAL\bin\Debug\DTO.pdb
-E:\QLHOTEL\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-E:\QLHOTEL\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-E:\QLHOTEL\DAL\obj\Debug\DAL.csproj.CopyComplete
-E:\QLHOTEL\DAL\obj\Debug\DAL.dll
-E:\QLHOTEL\DAL\obj\Debug\DAL.pdb
