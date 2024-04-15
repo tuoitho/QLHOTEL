@@ -46,6 +46,7 @@
     <Compile Include="DTO_Checkin.cs" />
     <Compile Include="DTO_DailyReport.cs" />
     <Compile Include="DTO_Employee.cs" />
+    <Compile Include="DTO_Phong.cs" />
     <Compile Include="DTO_Position.cs" />
     <Compile Include="DTO_Replacement.cs" />
     <Compile Include="DTO_Salary.cs" />

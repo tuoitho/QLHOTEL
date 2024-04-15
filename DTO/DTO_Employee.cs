@@ -8,25 +8,32 @@ namespace DTO
 {
     public class DTO_Employee
     {
-        private string maNV;
+        private int maNV;
         private string tenNV;
+        private string gender;
         private DateTime ngaysinh;
         private string diaChi;
         private string sDT;
-        private string email;
-        private string gender;
-        private string chucVu;
-        private double luongCoBan;
+        private int chucVu;
         //get,set
-        public string MaNV { get => maNV; set => maNV = value; }
+        public int MaNV { get => maNV; set => maNV = value; }
         public string TenNV { get => tenNV; set => tenNV = value; }
-        public DateTime Ngaysinh { get => Ngaysinh; set => ngaysinh = Ngaysinh; }
+        public DateTime Ngaysinh { get => ngaysinh; set => ngaysinh = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string SDT { get => sDT; set => sDT = value; }
-        public string Email { get => email; set => email = value; }
         public string Gender { get => gender; set => gender = value; }
-        public string ChucVu { get => chucVu; set => chucVu = value; }
-        public double LuongCoBan { get => luongCoBan; set => luongCoBan = value; }
+        public int ChucVu { get => chucVu; set => chucVu = value; }
+        //constructor
+        public DTO_Employee(int maNV, string tenNV,string gender,DateTime ngaysinh,string diaChi,string sDT,int chucVu)
+        {
+            this.MaNV = maNV;
+            this.TenNV = tenNV;
+            this.Gender = gender;
+            this.Ngaysinh = ngaysinh;
+            this.DiaChi = diaChi;
+            this.SDT = sDT;
+            this.ChucVu = chucVu;
+        }
 
     }
 }

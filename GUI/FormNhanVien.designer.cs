@@ -160,7 +160,7 @@ namespace GUI
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(272, 80);
+            this.groupBox4.Size = new System.Drawing.Size(279, 83);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Giới Tính";
@@ -168,7 +168,7 @@ namespace GUI
             // rdfemale
             // 
             this.rdfemale.AutoSize = true;
-            this.rdfemale.Location = new System.Drawing.Point(131, 36);
+            this.rdfemale.Location = new System.Drawing.Point(131, 18);
             this.rdfemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdfemale.Name = "rdfemale";
             this.rdfemale.Size = new System.Drawing.Size(82, 27);
@@ -180,7 +180,7 @@ namespace GUI
             // rdmale
             // 
             this.rdmale.AutoSize = true;
-            this.rdmale.Location = new System.Drawing.Point(16, 36);
+            this.rdmale.Location = new System.Drawing.Point(16, 18);
             this.rdmale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdmale.Name = "rdmale";
             this.rdmale.Size = new System.Drawing.Size(68, 27);
@@ -354,6 +354,7 @@ namespace GUI
             this.btn_add.TabIndex = 1;
             this.btn_add.Text = "   Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // bindingSource1
             // 

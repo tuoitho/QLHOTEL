@@ -156,6 +156,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelManagementDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PhongCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhongCard.Designer.cs">
+      <DependentUpon>PhongCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundedButton.cs">
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThayThe.resx">
       <DependentUpon>FormThayThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhongCard.resx">
+      <DependentUpon>PhongCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

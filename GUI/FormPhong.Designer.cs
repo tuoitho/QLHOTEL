@@ -32,7 +32,9 @@
             this.tabPage_qlphong = new System.Windows.Forms.TabPage();
             this.tabPage_thuephong = new System.Windows.Forms.TabPage();
             this.tabPage_traphong = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl_phong.SuspendLayout();
+            this.tabPage_qlphong.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_phong
@@ -50,6 +52,7 @@
             // 
             // tabPage_qlphong
             // 
+            this.tabPage_qlphong.Controls.Add(this.panel1);
             this.tabPage_qlphong.Location = new System.Drawing.Point(4, 31);
             this.tabPage_qlphong.Name = "tabPage_qlphong";
             this.tabPage_qlphong.Padding = new System.Windows.Forms.Padding(3);
@@ -79,6 +82,13 @@
             this.tabPage_traphong.Text = "Trả phòng";
             this.tabPage_traphong.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(98, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(887, 89);
+            this.panel1.TabIndex = 0;
+            // 
             // FormPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -89,6 +99,7 @@
             this.Text = "FormPhong";
             this.Load += new System.EventHandler(this.FormPhong_Load);
             this.tabControl_phong.ResumeLayout(false);
+            this.tabPage_qlphong.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -99,5 +110,6 @@
         private System.Windows.Forms.TabPage tabPage_qlphong;
         private System.Windows.Forms.TabPage tabPage_thuephong;
         private System.Windows.Forms.TabPage tabPage_traphong;
+        private System.Windows.Forms.Panel panel1;
     }
 }
