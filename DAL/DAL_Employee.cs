@@ -7,11 +7,13 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
-
+using System.Windows.Forms;
 namespace DAL
 {
     public class DAL_Employee
     {
+
+
         public static DataTable DSNhanVien()
         {
             DataTable dataTable = new DataTable();
@@ -39,7 +41,7 @@ namespace DAL
                 //        lstNhanVien.Add(dtoEmployee);
                         
                 //    }
-                
+                                
             }
             catch (Exception ex)
             {
@@ -50,6 +52,35 @@ namespace DAL
                 myDB.CloseConnection();
             }
             return dataTable;
+        }
+
+        public static bool insertNhanVien(DTO_Employee dtoEmployee)
+        {
+            MyDB myDB = new MyDB();
+            try
+            {
+                myDB.OpenConnection();
+                SqlCommand sqlCommand = new SqlCommand("insert into Employees values(@manv,@tennv,@gender,@ngaysinh,@diachi,@sdt,@chucvu,null)", myDB.GetConnection);
+                sqlCommand.Parameters.Add(parameterName: "@manv", SqlDbType.Int).Value = dtoEmployee.MaNV;
+                sqlCommand.Parameters.Add(parameterName: "@tennv", SqlDbType.NVarChar).Value = dtoEmployee.TenNV;
+                sqlCommand.Parameters.Add(parameterName: "@gender", SqlDbType.NVarChar).Value = dtoEmployee.Gender;
+                sqlCommand.Parameters.Add(parameterName: "@ngaysinh", SqlDbType.Date).Value = dtoEmployee.Ngaysinh;
+                sqlCommand.Parameters.Add(parameterName: "@diachi", SqlDbType.NVarChar).Value = dtoEmployee.DiaChi;
+                sqlCommand.Parameters.Add(parameterName: "@sdt", SqlDbType.NVarChar).Value = dtoEmployee.SDT;
+                sqlCommand.Parameters.Add(parameterName: "@chucvu", SqlDbType.Int).Value = dtoEmployee.ChucVu;
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                myDB.CloseConnection();
+            }
+            return true;
+
         }
     }
 }
